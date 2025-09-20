@@ -55,32 +55,30 @@ jobs:
           path: dist
 
   build-electron:
+    environment: OSSign
     strategy:
       fail-fast: false
       matrix:
         name:
           - windows
-          - mac-x64
-          - mac-arm64
-          - linux
+#          - mac-x64
+#          - mac-arm64
+#          - linux
         include:
           - os: windows-latest
             path: dist-electron/*.exe
             build-args: ""
             name: windows
-          - os: macos-latest
-            path: dist-electron/*.dmg
-            build-args: "--x64"
-            name: mac-x64
-            ext: x64
-          - os: macos-latest
-            path: dist-electron/*.dmg
-            build-args: "--arm64"
-            name: mac-arm64
-          - os: ubuntu-latest
-            path: dist-electron/*.AppImage
-            build-args: ""
-            name: linux
+#          - os: macos-latest
+#            path: dist-electron/*.dmg
+#            build-args: "--x64"
+#            name: mac-x64
+#            ext: x64
+#          - os: macos-latest
+#            path: dist-electron/*.dmg
+#            build-args: "--arm64"
+#            name: mac-arm64
+
 
     runs-on: ${{ matrix.os }}
     needs:
