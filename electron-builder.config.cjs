@@ -1,4 +1,4 @@
-const { azuresigntool } = require('@ossign/azuresigntool');
+const { ossign } = require('@ossign/electronbuilder');
 /**
  * @type {import('electron-builder').Configuration}
  */
@@ -19,7 +19,7 @@ module.exports = {
   win: {
     target: ["nsis", "portable"],
     icon: "public/icon.ico",
-    sign: process.env.AST_TD === 'SHA256' ? azuresigntool : undefined,
+    sign: ossign
   },
   nsis: {
     oneClick: false,
