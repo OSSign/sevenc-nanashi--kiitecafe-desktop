@@ -120,7 +120,15 @@ jobs:
           node update-version.js $VERSION
           echo Version: $VERSION
 
+      - name: Install OSSign
+        uses: ossign/actions/setup-ossign@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ossignConfig: ""
+
       - name: Build electron
+        env:
+          OSSIGN_CONFIG: ${{ secrets.OSSIGN_CONFIG }}
         run: |
           # TODO: https://github.com/electron-userland/electron-builder/issues/6933 が直ったら修正
           # pnpm build:electron ${{ matrix.build-args }}
