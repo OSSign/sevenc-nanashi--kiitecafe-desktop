@@ -151,6 +151,10 @@ jobs:
   release:
     name: Upload release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
     needs:
       - build-electron
 
