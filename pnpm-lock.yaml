@@ -73,8 +73,8 @@ importers:
         specifier: ^9.23.0
         version: 9.23.0
       '@ossign/electronbuilder':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       '@types/d3':
         specifier: ^7.4.3
         version: 7.4.3
@@ -522,8 +522,8 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     deprecated: This functionality has been moved to @npmcli/fs
 
-  '@ossign/electronbuilder@1.0.0':
-    resolution: {integrity: sha512-JGUBYlPxP4VE6eP1q+bmpUrqXg+20AB0s/9nlPWRGDlzO9edOAagr9j5HWUT9PTXrDFGEDuTG54t2hHI90pEBQ==}
+  '@ossign/electronbuilder@1.0.1':
+    resolution: {integrity: sha512-KqvVVpEBQeMthpt/l+sDUG3+uDjf9JZvWMLBixNc887N+qPAjbHPU1z8KDZMBaGaNtsg40LBT1/MhwwqCvIsEw==}
 
   '@parcel/watcher-android-arm64@2.5.1':
     resolution: {integrity: sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA==}
@@ -3819,7 +3819,7 @@ snapshots:
       mkdirp: 1.0.4
       rimraf: 3.0.2
 
-  '@ossign/electronbuilder@1.0.0': {}
+  '@ossign/electronbuilder@1.0.1': {}
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
